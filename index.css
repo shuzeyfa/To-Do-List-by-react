@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  background: linear-gradient(-45deg, #ac0b76, #edeef0, #1fe809);
+  background-size: 400% 400%;
+  animation: from 5s ease infinite;
+}
+@keyframes from{
+  0%{
+      background-position: 0% 50%;
+  }
+  50%{
+      background-position: 100% 50%;
+  }
+  100%{
+      background-position: 0% 50%;
+  }
+}
+
+#text{
+  width: 40%;
+  text-align: center;
+  margin: 50px auto;
+}
+
+#search-part{
+  background-color: white;
+  width: 35%;
+  margin: 100px auto 0px;
+  padding: 20px;
+  border-radius: 30px;
+
+}
+#search-task{
+  display: flex;
+  justify-content: space-between;
+  background-color: #edeef0;
+  height: 40px;
+  border-radius: 30px;
+  border: transparent;
+  margin-bottom: 30px;
+}
+#search-place{
+  border-radius: 30px;
+  outline: none;
+  border: transparent;
+  padding: 20px;
+  font-size: 16px;
+  background-color: #edeef0;
+  width: 80%;
+}
+#add-task{
+  border-radius: 30px;
+  background-color: orangered;
+  width: 20%;
+  height: 100%;
+  border: transparent;
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+ul li::before{
+  /* to add before li */
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(before.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+  
+}
+
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before{
+  background-image: url(after.png);
+}
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover{
+  background: #edeef0;
+}
